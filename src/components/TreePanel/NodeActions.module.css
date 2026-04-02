@@ -1,0 +1,36 @@
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.actions.visible {
+  opacity: 1;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-base);
+  color: var(--text-secondary);
+  transition: background 0.1s, color 0.1s;
+}
+
+.btn:hover {
+  background: var(--gray-200);
+  color: var(--text-primary);
+}
+
+.btn:focus-visible {
+  box-shadow: var(--focus-ring);
+}
+
+.deleteBtn:hover {
+  background: var(--color-coral-200);
+  color: var(--color-coral-700);
+}

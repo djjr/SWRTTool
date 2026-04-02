@@ -1,0 +1,49 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: var(--breadcrumb-height);
+  padding: 0 var(--space-4);
+  background: var(--gray-900);
+  color: var(--text-inverted);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.03em;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.crumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.crumbBtn {
+  color: var(--gray-400);
+  font: inherit;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  transition: color 0.1s, background 0.1s;
+}
+
+.crumbBtn:hover {
+  color: var(--white);
+  background: var(--gray-700);
+}
+
+.crumbRoot {
+  color: var(--gray-500);
+}
+
+.crumbCurrent {
+  color: var(--white);
+  font-weight: var(--weight-bold);
+  cursor: default;
+}
+
+.separator {
+  color: var(--gray-600);
+  margin: 0 1px;
+  user-select: none;
+}

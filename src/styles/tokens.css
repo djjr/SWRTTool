@@ -1,0 +1,139 @@
+/* ─── SWRT Design System — Bauhaus-inspired ───────────────────────────────── */
+
+:root {
+  /* Typography */
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-xs:   0.75rem;   /* 12px */
+  --text-sm:   0.875rem;  /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg:   1.125rem;  /* 18px */
+  --text-xl:   1.375rem;  /* 22px */
+  --text-2xl:  1.75rem;   /* 28px */
+
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-bold:    700;
+  --weight-black:   900;
+
+  --leading-tight:  1.2;
+  --leading-normal: 1.5;
+
+  /* Spacing scale */
+  --space-1:  0.25rem;   /* 4px */
+  --space-2:  0.5rem;    /* 8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+
+  /* Neutral scale — near-black, grays, near-white */
+  --gray-950: #0d0d0d;
+  --gray-900: #1a1a1a;
+  --gray-800: #2e2e2e;
+  --gray-700: #444444;
+  --gray-600: #666666;
+  --gray-500: #888888;
+  --gray-400: #aaaaaa;
+  --gray-300: #cccccc;
+  --gray-200: #e2e2e2;
+  --gray-100: #f0f0f0;
+  --gray-50:  #f8f8f8;
+  --white:    #ffffff;
+
+  /* Vocabulary color ramps — bold, saturated, Bauhaus-primary-influenced */
+  /* Domain → deep violet */
+  --color-purple-700: #4c1d95;
+  --color-purple-600: #6d28d9;
+  --color-purple-200: #ddd6fe;
+  --color-purple-50:  #f5f3ff;
+
+  /* Topic → constructed teal */
+  --color-teal-700: #0f5f5a;
+  --color-teal-600: #0d9488;
+  --color-teal-200: #99f6e4;
+  --color-teal-50:  #f0fdfa;
+
+  /* Concept → strong blue */
+  --color-blue-700: #1d4ed8;
+  --color-blue-600: #2563eb;
+  --color-blue-200: #bfdbfe;
+  --color-blue-50:  #eff6ff;
+
+  /* Skill → warm amber/gold */
+  --color-amber-700: #b45309;
+  --color-amber-600: #d97706;
+  --color-amber-200: #fde68a;
+  --color-amber-50:  #fffbeb;
+
+  /* Example → warm coral-red */
+  --color-coral-700: #be123c;
+  --color-coral-600: #e11d48;
+  --color-coral-200: #fecdd3;
+  --color-coral-50:  #fff1f2;
+
+  /* Type → color mapping (used via var composition) */
+  --type-purple-fg:  var(--color-purple-700);
+  --type-purple-bg:  var(--color-purple-50);
+  --type-purple-mid: var(--color-purple-200);
+
+  --type-teal-fg:    var(--color-teal-700);
+  --type-teal-bg:    var(--color-teal-50);
+  --type-teal-mid:   var(--color-teal-200);
+
+  --type-blue-fg:    var(--color-blue-700);
+  --type-blue-bg:    var(--color-blue-50);
+  --type-blue-mid:   var(--color-blue-200);
+
+  --type-amber-fg:   var(--color-amber-700);
+  --type-amber-bg:   var(--color-amber-50);
+  --type-amber-mid:  var(--color-amber-200);
+
+  --type-coral-fg:   var(--color-coral-700);
+  --type-coral-bg:   var(--color-coral-50);
+  --type-coral-mid:  var(--color-coral-200);
+
+  /* App surface */
+  --surface-app:    var(--gray-50);
+  --surface-panel:  var(--white);
+  --surface-raised: var(--white);
+
+  /* Text */
+  --text-primary:   var(--gray-900);
+  --text-secondary: var(--gray-600);
+  --text-muted:     var(--gray-400);
+  --text-inverted:  var(--white);
+
+  /* Border */
+  --border-subtle:  var(--gray-200);
+  --border-default: var(--gray-300);
+  --border-strong:  var(--gray-700);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 2px var(--gray-900);
+
+  /* Selection highlight */
+  --selection-bg: #fff3b0;
+  --selection-border: #e6c000;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.14);
+
+  /* Radii — minimal; Bauhaus doesn't round corners gratuitously */
+  --radius-sm:   2px;
+  --radius-base: 4px;
+  --radius-lg:   6px;
+
+  /* Layout */
+  --header-height:    52px;
+  --toolbar-height:   44px;
+  --breadcrumb-height: 36px;
+  --panel-width:      380px;
+  --tree-indent:      24px;
+}
