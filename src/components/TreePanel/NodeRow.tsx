@@ -24,6 +24,12 @@ const DEPTH_COLORS: string[] = [
   'var(--color-coral-600)',
 ];
 
+// Approximate pixel width of the fixed left-side controls inside the row:
+// drag handle (12) + gap (8) + expand toggle (20) + gap (8) + checkbox (16) + gap (8)
+// + avg type badge (~56) + gap (8) = ~136px
+// This is applied as extra left padding on the inline detail so it aligns with the label.
+const ROW_LABEL_OFFSET = 136;
+
 export function NodeRow({ node, depth, isSelected, isExpanded, dropPosition }: Props) {
   const typeVocabulary    = useTaxonomyStore(s => s.typeVocabulary);
   const updateNode        = useTaxonomyStore(s => s.updateNode);
@@ -259,7 +265,7 @@ export function NodeRow({ node, depth, isSelected, isExpanded, dropPosition }: P
 
       {/* ── Inline description accordion ── */}
       {isInlineExpanded && !isInlineEditing && (
-        <div className={styles.inlineDetail}>
+        <div className={styles.inlineDetail} style={{ paddingLeft: ROW_LABEL_OFFSET }}>
           <textarea
             className={styles.inlineDescriptionInput}
             value={node.description ?? ''}
