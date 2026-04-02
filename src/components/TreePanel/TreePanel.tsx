@@ -123,9 +123,14 @@ export function TreePanel() {
             {siblingIds.length > 0 && (
               <div className={styles.siblingsStrip} aria-label="Siblings (context)">
                 {siblingIds.map(id => (
-                  <span key={id} className={styles.siblingPill}>
+                  <button
+                    key={id}
+                    className={styles.siblingPill}
+                    onClick={e => { e.stopPropagation(); setFocus(id); }}
+                    title={`Focus: ${nodes[id]?.label}`}
+                  >
                     {nodes[id]?.label}
-                  </span>
+                  </button>
                 ))}
               </div>
             )}
