@@ -2,21 +2,17 @@ import { useState } from 'react';
 import styles from './VocabularyModal.module.css';
 import { useTaxonomyStore } from '../../store/taxonomyStore';
 
-const AVAILABLE_COLORS = [
-  { id: 'purple', label: 'Purple' },
-  { id: 'teal',   label: 'Teal' },
-  { id: 'blue',   label: 'Blue' },
-  { id: 'amber',  label: 'Amber' },
-  { id: 'coral',  label: 'Coral' },
-];
-
-const SWATCH_COLORS: Record<string, string> = {
+const NAMED_SWATCH_COLORS: Record<string, string> = {
   purple: '#6d28d9',
   teal:   '#0d9488',
   blue:   '#2563eb',
   amber:  '#d97706',
   coral:  '#e11d48',
 };
+
+function resolveSwatchColor(color: string): string {
+  return NAMED_SWATCH_COLORS[color] ?? color;
+}
 
 interface Props {
   onClose: () => void;
@@ -28,7 +24,7 @@ export function VocabularyModal({ onClose }: Props) {
   const addType = useTaxonomyStore(s => s.addType);
 
   const [newLabel, setNewLabel] = useState('');
-  const [newColor, setNewColor] = useState('blue');
+  const [newColor, setNewColor] = useState('#2563eb');
 
   function handleAdd() {
     if (!newLabel.trim()) return;
@@ -38,7 +34,6 @@ export function VocabularyModal({ onClose }: Props) {
 
   function handleKeyDown(e: React.KeyboardEvent) {
     if (e.key === 'Escape') onClose();
-    if (e.key === 'Enter' && e.target === e.currentTarget) handleAdd();
   }
 
   return (
@@ -65,7 +60,7 @@ export function VocabularyModal({ onClose }: Props) {
             <div key={t.id} className={styles.typeRow}>
               <div
                 className={styles.colorSwatch}
-                style={{ background: SWATCH_COLORS[t.color] ?? t.color }}
+                style={{ background: resolveSwatchColor(t.color) }}
                 aria-label={t.color}
               />
               <div className={styles.typeLabel}>{t.label}</div>
@@ -95,16 +90,20 @@ export function VocabularyModal({ onClose }: Props) {
                 placeholder="Label (e.g. Objective)"
                 aria-label="New type label"
               />
-              <select
-                className={styles.colorSelect}
-                value={newColor}
-                onChange={e => setNewColor(e.target.value)}
-                aria-label="New type color"
-              >
-                {AVAILABLE_COLORS.map(c => (
-                  <option key={c.id} value={c.id}>{c.label}</option>
-                ))}
-              </select>
+              <label className={styles.colorPickerLabel} title="Pick a color">
+                <input
+                  type="color"
+                  className={styles.colorPicker}
+                  value={newColor}
+                  onChange={e => setNewColor(e.target.value)}
+                  aria-label="New type color"
+                />
+                <span
+                  className={styles.colorPickerSwatch}
+                  style={{ background: newColor }}
+                  aria-hidden
+                />
+              </label>
               <button
                 className={styles.addBtn}
                 onClick={handleAdd}

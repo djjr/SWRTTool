@@ -141,13 +141,39 @@
   border-color: var(--gray-900);
 }
 
-.colorSelect {
-  font: inherit;
-  font-size: var(--text-sm);
-  border: 2px solid var(--border-default);
+.colorPickerLabel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.colorPicker {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.colorPickerSwatch {
+  display: block;
+  width: 34px;
+  height: 34px;
   border-radius: var(--radius-base);
-  padding: var(--space-2);
-  background: var(--white);
+  border: 2px solid var(--border-default);
+  transition: border-color 0.1s, box-shadow 0.1s;
+}
+
+.colorPickerLabel:hover .colorPickerSwatch {
+  border-color: var(--gray-700);
+  box-shadow: var(--shadow-sm);
+}
+
+.colorPickerLabel:focus-within .colorPickerSwatch {
+  border-color: var(--gray-900);
+  box-shadow: var(--focus-ring);
 }
 
 .addBtn {
