@@ -33,6 +33,14 @@
   border-left: 1px solid var(--gray-700);
 }
 
+.version {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-regular);
+  color: var(--gray-700);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
 .spacer {
   flex: 1;
 }

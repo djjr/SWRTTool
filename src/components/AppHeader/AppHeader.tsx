@@ -36,6 +36,7 @@ export function AppHeader() {
           SWR<span className={styles.wordmarkAccent}>T</span>
         </div>
         <div className={styles.subtitle}>Stepwise Refinement Tool</div>
+        <div className={styles.version}>v0.0 · 20250402</div>
 
         <div className={styles.spacer} />
 
