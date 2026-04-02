@@ -36,6 +36,7 @@ export const useTaxonomyStore = create<TaxonomyStore>((set, get) => ({
   expandedIds: new Set(['domain-1']),
   selectedIds: new Set(),
   editingNodeId: null,
+  inlineEditingNodeId: null,
   activeDetailTab: 'content',
 
   // OPERATIONS
@@ -98,9 +99,10 @@ export const useTaxonomyStore = create<TaxonomyStore>((set, get) => ({
       persist(next);
       // Clean up view state
       const editingNodeId = state.editingNodeId === nodeId ? null : state.editingNodeId;
+      const inlineEditingNodeId = state.inlineEditingNodeId === nodeId ? null : state.inlineEditingNodeId;
       const focusedNodeId = state.focusedNodeId === nodeId ? null : state.focusedNodeId;
       const selectedIds = new Set([...state.selectedIds].filter(id => id !== nodeId));
-      return { ...next, editingNodeId, focusedNodeId, selectedIds };
+      return { ...next, editingNodeId, inlineEditingNodeId, focusedNodeId, selectedIds };
     });
   },
 
@@ -148,6 +150,8 @@ export const useTaxonomyStore = create<TaxonomyStore>((set, get) => ({
 
   setEditingNode: (nodeId) => set({ editingNodeId: nodeId }),
 
+  setInlineEditingNode: (nodeId) => set({ inlineEditingNodeId: nodeId }),
+
   setActiveDetailTab: (tab) => set({ activeDetailTab: tab }),
 
   // VOCABULARY
@@ -181,6 +185,7 @@ export const useTaxonomyStore = create<TaxonomyStore>((set, get) => ({
       expandedIds: new Set(state.rootIds),
       selectedIds: new Set(),
       editingNodeId: null,
+      inlineEditingNodeId: null,
       activeDetailTab: 'content',
     }),
 
@@ -191,6 +196,7 @@ export const useTaxonomyStore = create<TaxonomyStore>((set, get) => ({
       expandedIds: new Set(['domain-1']),
       selectedIds: new Set(),
       editingNodeId: null,
+      inlineEditingNodeId: null,
       activeDetailTab: 'content',
     }),
 }));

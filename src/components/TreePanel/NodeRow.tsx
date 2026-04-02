@@ -11,7 +11,6 @@ import type { TaxonomyNode } from '../../types/taxonomy';
 interface Props {
   node: TaxonomyNode;
   depth: number;
-  isEditing: boolean;
   isSelected: boolean;
   isExpanded: boolean;
   dropPosition?: 'before' | 'after' | 'into' | null;
@@ -25,10 +24,10 @@ const DEPTH_COLORS: string[] = [
   'var(--color-coral-600)',
 ];
 
-export function NodeRow({ node, depth, isEditing, isSelected, isExpanded, dropPosition }: Props) {
+export function NodeRow({ node, depth, isSelected, isExpanded, dropPosition }: Props) {
   const typeVocabulary = useTaxonomyStore(s => s.typeVocabulary);
   const updateNode = useTaxonomyStore(s => s.updateNode);
-  const setEditingNode = useTaxonomyStore(s => s.setEditingNode);
+  const setInlineEditingNode = useTaxonomyStore(s => s.setInlineEditingNode);
   const toggleExpanded = useTaxonomyStore(s => s.toggleExpanded);
   const toggleSelected = useTaxonomyStore(s => s.toggleSelected);
   const selectedIds = useTaxonomyStore(s => s.selectedIds);
@@ -36,6 +35,7 @@ export function NodeRow({ node, depth, isEditing, isSelected, isExpanded, dropPo
   const addChild = useTaxonomyStore(s => s.addChild);
   const addSibling = useTaxonomyStore(s => s.addSibling);
   const setExpanded = useTaxonomyStore(s => s.setExpanded);
+  const inlineEditingNodeId = useTaxonomyStore(s => s.inlineEditingNodeId);
 
   const [hovered, setHovered] = useState(false);
   const [editValue, setEditValue] = useState(node.label);
@@ -64,23 +64,24 @@ export function NodeRow({ node, depth, isEditing, isSelected, isExpanded, dropPo
     paddingLeft: `calc(var(--space-3) + ${depth * 24}px)`,
   };
 
+  const isInlineEditing = inlineEditingNodeId === node.id;
+
   useEffect(() => {
-    if (isEditing) {
+    if (isInlineEditing) {
       setEditValue(node.label);
       inputRef.current?.focus();
       inputRef.current?.select();
     }
-  }, [isEditing, node.label]);
+  }, [isInlineEditing, node.label]);
 
   function commitEdit() {
     const trimmed = editValue.trim();
     if (trimmed && trimmed !== node.label) {
       updateNode(node.id, { label: trimmed });
     } else if (!trimmed) {
-      // keep old label if blank
       setEditValue(node.label);
     }
-    setEditingNode(null);
+    setInlineEditingNode(null);
   }
 
   function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
@@ -88,28 +89,26 @@ export function NodeRow({ node, depth, isEditing, isSelected, isExpanded, dropPo
       e.preventDefault();
       commitEdit();
       const newId = addSibling(node.id, { label: '' });
-      setEditingNode(newId);
+      setInlineEditingNode(newId);
     } else if (e.key === 'Tab') {
       e.preventDefault();
       commitEdit();
-      if (e.shiftKey) {
-        // outdent — handled by parent eventually; for now just stop editing
-      } else {
+      if (!e.shiftKey) {
         const newId = addChild(node.id, { label: '' });
         setExpanded(node.id, true);
-        setEditingNode(newId);
+        setInlineEditingNode(newId);
       }
     } else if (e.key === 'Escape') {
       setEditValue(node.label);
-      setEditingNode(null);
+      setInlineEditingNode(null);
     }
   }
 
   function handleRowKeyDown(e: React.KeyboardEvent<HTMLDivElement>) {
-    if (isEditing) return;
+    if (isInlineEditing) return;
     if (e.key === 'Enter') {
       e.preventDefault();
-      setEditingNode(node.id);
+      setInlineEditingNode(node.id);
     } else if (e.key === ' ') {
       e.preventDefault();
       toggleExpanded(node.id);
@@ -224,7 +223,7 @@ export function NodeRow({ node, depth, isEditing, isSelected, isExpanded, dropPo
       <TypeBadge typeDef={typeDef} />
 
       {/* Label / inline edit */}
-      {isEditing ? (
+      {isInlineEditing ? (
         <input
           ref={inputRef}
           className={styles.labelInput}
@@ -238,7 +237,7 @@ export function NodeRow({ node, depth, isEditing, isSelected, isExpanded, dropPo
       ) : (
         <span
           className={`${styles.label} ${!node.label ? styles.labelEmpty : ''}`}
-          onDoubleClick={e => { e.stopPropagation(); setEditingNode(node.id); }}
+          onDoubleClick={e => { e.stopPropagation(); setInlineEditingNode(node.id); }}
         >
           {node.label || 'Untitled'}
         </span>
@@ -247,7 +246,7 @@ export function NodeRow({ node, depth, isEditing, isSelected, isExpanded, dropPo
       {/* Node actions */}
       <NodeActions
         nodeId={node.id}
-        visible={hovered && !isEditing}
+        visible={hovered && !isInlineEditing}
         onFocus={() => setFocus(node.id)}
       />
 

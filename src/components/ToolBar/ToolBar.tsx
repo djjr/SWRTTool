@@ -5,7 +5,7 @@ import { WrapModal } from '../WrapModal/WrapModal';
 
 export function ToolBar() {
   const addRoot = useTaxonomyStore(s => s.addRoot);
-  const setEditingNode = useTaxonomyStore(s => s.setEditingNode);
+  const setInlineEditingNode = useTaxonomyStore(s => s.setInlineEditingNode);
   const selectedIds = useTaxonomyStore(s => s.selectedIds);
   const nodes = useTaxonomyStore(s => s.nodes);
   const clearSelection = useTaxonomyStore(s => s.clearSelection);
@@ -14,7 +14,7 @@ export function ToolBar() {
 
   function handleAddRoot() {
     const newId = addRoot({ label: '' });
-    setEditingNode(newId);
+    setInlineEditingNode(newId);
   }
 
   // Wrap is valid when ≥2 selected and all share same parent

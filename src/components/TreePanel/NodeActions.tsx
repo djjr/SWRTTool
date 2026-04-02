@@ -11,6 +11,7 @@ export function NodeActions({ nodeId, visible, onFocus }: Props) {
   const addChild = useTaxonomyStore(s => s.addChild);
   const addSibling = useTaxonomyStore(s => s.addSibling);
   const setEditingNode = useTaxonomyStore(s => s.setEditingNode);
+  const setInlineEditingNode = useTaxonomyStore(s => s.setInlineEditingNode);
   const setExpanded = useTaxonomyStore(s => s.setExpanded);
   const deleteNode = useTaxonomyStore(s => s.deleteNode);
   const nodes = useTaxonomyStore(s => s.nodes);
@@ -21,13 +22,13 @@ export function NodeActions({ nodeId, visible, onFocus }: Props) {
     e.stopPropagation();
     const newId = addChild(nodeId, { label: '' });
     setExpanded(nodeId, true);
-    setEditingNode(newId);
+    setInlineEditingNode(newId);
   }
 
   function handleAddSibling(e: React.MouseEvent) {
     e.stopPropagation();
     const newId = addSibling(nodeId, { label: '' });
-    setEditingNode(newId);
+    setInlineEditingNode(newId);
   }
 
   function handleOpenDetail(e: React.MouseEvent) {

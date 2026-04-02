@@ -28,7 +28,8 @@ export interface TaxonomyStore {
   focusedNodeId: string | null;
   expandedIds: Set<string>;
   selectedIds: Set<string>;
-  editingNodeId: string | null;
+  editingNodeId: string | null;        // which node has the detail panel open
+  inlineEditingNodeId: string | null;  // which node has the inline label editor active
   activeDetailTab: 'content' | 'ai';
 
   // OPERATIONS
@@ -51,6 +52,7 @@ export interface TaxonomyStore {
   toggleSelected: (nodeId: string) => void;
   clearSelection: () => void;
   setEditingNode: (nodeId: string | null) => void;
+  setInlineEditingNode: (nodeId: string | null) => void;
   setActiveDetailTab: (tab: 'content' | 'ai') => void;
 
   // VOCABULARY

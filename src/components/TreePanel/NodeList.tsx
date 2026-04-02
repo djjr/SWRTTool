@@ -13,8 +13,6 @@ export function NodeList({ nodeIds, depth = 0, dropOverId, dropPosition }: Props
   const nodes = useTaxonomyStore(s => s.nodes);
   const expandedIds = useTaxonomyStore(s => s.expandedIds);
   const selectedIds = useTaxonomyStore(s => s.selectedIds);
-  const editingNodeId = useTaxonomyStore(s => s.editingNodeId);
-
   return (
     <SortableContext items={nodeIds} strategy={verticalListSortingStrategy}>
       {nodeIds.map(id => {
@@ -22,7 +20,6 @@ export function NodeList({ nodeIds, depth = 0, dropOverId, dropPosition }: Props
         if (!node) return null;
         const isExpanded = expandedIds.has(id);
         const isSelected = selectedIds.has(id);
-        const isEditing = editingNodeId === id;
         const thisDropPos = dropOverId === id ? dropPosition : null;
 
         return (
@@ -30,7 +27,6 @@ export function NodeList({ nodeIds, depth = 0, dropOverId, dropPosition }: Props
             <NodeRow
               node={node}
               depth={depth}
-              isEditing={isEditing}
               isSelected={isSelected}
               isExpanded={isExpanded}
               dropPosition={thisDropPos}
