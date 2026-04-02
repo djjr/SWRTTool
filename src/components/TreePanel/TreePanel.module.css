@@ -18,9 +18,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
-  border-bottom: 1px solid var(--border-subtle);
-  margin-bottom: var(--space-3);
+  padding: var(--space-2) var(--space-4) var(--space-3);
+  /* No bottom border — the heading's top padding provides enough separation */
+  margin-bottom: 0;
 }
 
 .siblingPill {

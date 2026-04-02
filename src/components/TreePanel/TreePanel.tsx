@@ -120,11 +120,6 @@ export function TreePanel() {
       >
         {focusedNode && (
           <>
-            <div className={styles.focusHeading}>
-              <TypeBadge typeDef={focusedTypeDef} />
-              {' '}
-              {focusedNode.label}
-            </div>
             {siblingIds.length > 0 && (
               <div className={styles.siblingsStrip} aria-label="Siblings (context)">
                 {siblingIds.map(id => (
@@ -134,6 +129,11 @@ export function TreePanel() {
                 ))}
               </div>
             )}
+            <div className={styles.focusHeading}>
+              <TypeBadge typeDef={focusedTypeDef} />
+              {' '}
+              {focusedNode.label}
+            </div>
           </>
         )}
 
