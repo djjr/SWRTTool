@@ -8,6 +8,8 @@ const NAMED_SWATCH_COLORS: Record<string, string> = {
   blue:   '#2563eb',
   amber:  '#d97706',
   coral:  '#e11d48',
+  green:  '#16a34a',
+  slate:  '#475569',
 };
 
 function resolveSwatchColor(color: string): string {

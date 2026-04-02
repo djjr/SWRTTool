@@ -12,6 +12,8 @@ const COLOR_CLASSES: Record<string, string> = {
   blue:   styles.blue!,
   amber:  styles.amber!,
   coral:  styles.coral!,
+  green:  styles.green!,
+  slate:  styles.slate!,
 };
 
 function hexToInlineStyle(hex: string): CSSProperties {

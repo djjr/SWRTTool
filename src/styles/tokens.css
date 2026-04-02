@@ -76,6 +76,18 @@
   --color-coral-200: #fecdd3;
   --color-coral-50:  #fff1f2;
 
+  /* Skill → functional green */
+  --color-green-700: #15803d;
+  --color-green-600: #16a34a;
+  --color-green-200: #bbf7d0;
+  --color-green-50:  #f0fdf4;
+
+  /* Grain → cool slate */
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-200: #cbd5e1;
+  --color-slate-50:  #f8fafc;
+
   /* Type → color mapping (used via var composition) */
   --type-purple-fg:  var(--color-purple-700);
   --type-purple-bg:  var(--color-purple-50);

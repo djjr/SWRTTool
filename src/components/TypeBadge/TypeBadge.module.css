@@ -19,4 +19,6 @@
 .blue   { background: var(--color-blue-200);   color: var(--color-blue-700); }
 .amber  { background: var(--color-amber-200);  color: var(--color-amber-700); }
 .coral  { background: var(--color-coral-200);  color: var(--color-coral-700); }
+.green  { background: var(--color-green-200);  color: var(--color-green-700); }
+.slate  { background: var(--color-slate-200);  color: var(--color-slate-700); }
 .default { background: var(--gray-200);        color: var(--gray-700); }

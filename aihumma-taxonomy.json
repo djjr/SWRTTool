@@ -1,0 +1,686 @@
+{
+  "nodes": {
+    "aihumma-root": {
+      "id": "aihumma-root",
+      "label": "AIHUMMA Learning Outcomes",
+      "description": "Taxonomy of learning outcomes for the AIHUMMA program.",
+      "type": "program",
+      "parentId": null,
+      "childIds": [
+        "cluster-tl",
+        "cluster-ch",
+        "cluster-ev",
+        "cluster-gp",
+        "cluster-rm",
+        "cluster-cw",
+        "cluster-hi",
+        "cluster-sd"
+      ],
+      "createdAt": 1700000000000,
+      "updatedAt": 1700000000000
+    },
+    "cluster-tl": {
+      "id": "cluster-tl",
+      "label": "Technical Literacy",
+      "description": "Cluster TL \u2014 Understanding how AI and ML systems are built, trained, and evaluated. Spans conceptual literacy through hands-on implementation.",
+      "type": "strand",
+      "parentId": "aihumma-root",
+      "childIds": [
+        "tl-01",
+        "tl-02",
+        "tl-03",
+        "tl-04",
+        "tl-05",
+        "tl-06",
+        "tl-07"
+      ],
+      "createdAt": 1700000001000,
+      "updatedAt": 1700000001000
+    },
+    "tl-01": {
+      "id": "tl-01",
+      "label": "ML Model Types",
+      "description": "TL-01 \u2014 Explain how core ML model types (classification, regression, clustering, deep learning, generative models) work at a conceptual level.",
+      "type": "outcome",
+      "parentId": "cluster-tl",
+      "childIds": [],
+      "createdAt": 1700000100000,
+      "updatedAt": 1700000100000
+    },
+    "tl-02": {
+      "id": "tl-02",
+      "label": "Technical Documentation Critique",
+      "description": "TL-02 \u2014 Interpret technical AI documentation (model cards, capability evaluations, technical specs) as arguments rather than facts.",
+      "type": "outcome",
+      "parentId": "cluster-tl",
+      "childIds": [],
+      "createdAt": 1700000101000,
+      "updatedAt": 1700000101000
+    },
+    "tl-03": {
+      "id": "tl-03",
+      "label": "ML Workflow Implementation",
+      "description": "TL-03 \u2014 Implement basic ML workflows using Python and standard libraries (scikit-learn, PyTorch, TensorFlow).",
+      "type": "outcome",
+      "parentId": "cluster-tl",
+      "childIds": [],
+      "createdAt": 1700000102000,
+      "updatedAt": 1700000102000
+    },
+    "tl-04": {
+      "id": "tl-04",
+      "label": "LLM Architecture & Training",
+      "description": "TL-04 \u2014 Explain LLM architecture and training processes (attention mechanisms, transformers, RLHF, fine-tuning, prompt engineering).",
+      "type": "outcome",
+      "parentId": "cluster-tl",
+      "childIds": [],
+      "createdAt": 1700000103000,
+      "updatedAt": 1700000103000
+    },
+    "tl-05": {
+      "id": "tl-05",
+      "label": "ML Mathematical Foundations",
+      "description": "TL-05 \u2014 Apply mathematical foundations (linear algebra, probability, calculus, optimization) to understand ML system design.",
+      "type": "outcome",
+      "parentId": "cluster-tl",
+      "childIds": [],
+      "createdAt": 1700000104000,
+      "updatedAt": 1700000104000
+    },
+    "tl-06": {
+      "id": "tl-06",
+      "label": "AI Paradigm Distinctions",
+      "description": "TL-06 \u2014 Distinguish among AI paradigms (rule-based systems, narrow ML, LLMs, generative AI, agentic AI) and their capabilities and limits.",
+      "type": "outcome",
+      "parentId": "cluster-tl",
+      "childIds": [],
+      "createdAt": 1700000105000,
+      "updatedAt": 1700000105000
+    },
+    "tl-07": {
+      "id": "tl-07",
+      "label": "AI System Evaluation",
+      "description": "TL-07 \u2014 Evaluate AI system performance, failure modes, and deployment constraints using appropriate frameworks.",
+      "type": "outcome",
+      "parentId": "cluster-tl",
+      "childIds": [],
+      "createdAt": 1700000106000,
+      "updatedAt": 1700000106000
+    },
+    "cluster-ch": {
+      "id": "cluster-ch",
+      "label": "Critical & Humanistic Analysis",
+      "description": "Cluster CH \u2014 Applying humanistic and critical methods to study AI as a historical, cultural, and ideological phenomenon.",
+      "type": "strand",
+      "parentId": "aihumma-root",
+      "childIds": [
+        "ch-01",
+        "ch-02",
+        "ch-03",
+        "ch-04",
+        "ch-05",
+        "ch-06"
+      ],
+      "createdAt": 1700000002000,
+      "updatedAt": 1700000002000
+    },
+    "ch-01": {
+      "id": "ch-01",
+      "label": "AI Intellectual History",
+      "description": "CH-01 \u2014 Situate AI development within its intellectual and political history (from 1940s to present).",
+      "type": "outcome",
+      "parentId": "cluster-ch",
+      "childIds": [],
+      "createdAt": 1700000200000,
+      "updatedAt": 1700000200000
+    },
+    "ch-02": {
+      "id": "ch-02",
+      "label": "AI Discourse Critique",
+      "description": "CH-02 \u2014 Analyze AI discourse, artifacts, and promotional claims as ideologically and rhetorically constructed texts.",
+      "type": "outcome",
+      "parentId": "cluster-ch",
+      "childIds": [],
+      "createdAt": 1700000201000,
+      "updatedAt": 1700000201000
+    },
+    "ch-03": {
+      "id": "ch-03",
+      "label": "Humanistic Research Methods",
+      "description": "CH-03 \u2014 Apply humanistic methods (close reading, ethnography, cultural analysis, oral history) to study AI phenomena.",
+      "type": "outcome",
+      "parentId": "cluster-ch",
+      "childIds": [],
+      "createdAt": 1700000202000,
+      "updatedAt": 1700000202000
+    },
+    "ch-04": {
+      "id": "ch-04",
+      "label": "Cultural AI Representations",
+      "description": "CH-04 \u2014 Critique AI representations in cultural forms (film, theatre, fiction, media) and what they reveal about social anxieties.",
+      "type": "outcome",
+      "parentId": "cluster-ch",
+      "childIds": [],
+      "createdAt": 1700000203000,
+      "updatedAt": 1700000203000
+    },
+    "ch-05": {
+      "id": "ch-05",
+      "label": "AI Consciousness & Agency",
+      "description": "CH-05 \u2014 Evaluate AI claims about consciousness, intelligence, and agency using philosophical and cognitive science frameworks.",
+      "type": "outcome",
+      "parentId": "cluster-ch",
+      "childIds": [],
+      "createdAt": 1700000204000,
+      "updatedAt": 1700000204000
+    },
+    "ch-06": {
+      "id": "ch-06",
+      "label": "Critical Frameworks for AI",
+      "description": "CH-06 \u2014 Analyze AI through feminist, postcolonial, critical race, or disability frameworks to reveal differential impacts.",
+      "type": "outcome",
+      "parentId": "cluster-ch",
+      "childIds": [],
+      "createdAt": 1700000205000,
+      "updatedAt": 1700000205000
+    },
+    "cluster-ev": {
+      "id": "cluster-ev",
+      "label": "Ethics & Values",
+      "description": "Cluster EV \u2014 Applying ethical frameworks and critiquing the limits of ethics discourse in AI governance.",
+      "type": "strand",
+      "parentId": "aihumma-root",
+      "childIds": [
+        "ev-01",
+        "ev-02",
+        "ev-03",
+        "ev-04",
+        "ev-05",
+        "ev-06"
+      ],
+      "createdAt": 1700000003000,
+      "updatedAt": 1700000003000
+    },
+    "ev-01": {
+      "id": "ev-01",
+      "label": "Ethical Framework Application",
+      "description": "EV-01 \u2014 Apply major ethical frameworks (consequentialism, rights-based, virtue ethics, care ethics) to AI deployment decisions.",
+      "type": "outcome",
+      "parentId": "cluster-ev",
+      "childIds": [],
+      "createdAt": 1700000300000,
+      "updatedAt": 1700000300000
+    },
+    "ev-02": {
+      "id": "ev-02",
+      "label": "Algorithmic Bias",
+      "description": "EV-02 \u2014 Identify and analyze sources of algorithmic bias and unfairness across different social domains.",
+      "type": "outcome",
+      "parentId": "cluster-ev",
+      "childIds": [],
+      "createdAt": 1700000301000,
+      "updatedAt": 1700000301000
+    },
+    "ev-03": {
+      "id": "ev-03",
+      "label": "Responsible AI Instruments",
+      "description": "EV-03 \u2014 Evaluate responsible AI instruments (ethics guidelines, model cards, impact assessments, audit frameworks) for their scope and limits.",
+      "type": "outcome",
+      "parentId": "cluster-ev",
+      "childIds": [],
+      "createdAt": 1700000302000,
+      "updatedAt": 1700000302000
+    },
+    "ev-04": {
+      "id": "ev-04",
+      "label": "High-Stakes Domain Ethics",
+      "description": "EV-04 \u2014 Analyze the ethics of AI in high-stakes domains (healthcare, criminal justice, hiring, surveillance, warfare).",
+      "type": "outcome",
+      "parentId": "cluster-ev",
+      "childIds": [],
+      "createdAt": 1700000303000,
+      "updatedAt": 1700000303000
+    },
+    "ev-05": {
+      "id": "ev-05",
+      "label": "Ethics vs Structural Critique",
+      "description": "EV-05 \u2014 Distinguish procedural ethics from structural/systemic critique and recognize when ethics discourse substitutes for governance.",
+      "type": "outcome",
+      "parentId": "cluster-ev",
+      "childIds": [],
+      "createdAt": 1700000304000,
+      "updatedAt": 1700000304000
+    },
+    "ev-06": {
+      "id": "ev-06",
+      "label": "Privacy & Data Rights",
+      "description": "EV-06 \u2014 Assess privacy, consent, and data rights implications of AI systems and their deployment contexts.",
+      "type": "outcome",
+      "parentId": "cluster-ev",
+      "childIds": [],
+      "createdAt": 1700000305000,
+      "updatedAt": 1700000305000
+    },
+    "cluster-gp": {
+      "id": "cluster-gp",
+      "label": "Governance & Policy",
+      "description": "Cluster GP \u2014 Analyzing AI regulatory frameworks, institutional design, and international governance.",
+      "type": "strand",
+      "parentId": "aihumma-root",
+      "childIds": [
+        "gp-01",
+        "gp-02",
+        "gp-03",
+        "gp-04",
+        "gp-05",
+        "gp-06"
+      ],
+      "createdAt": 1700000004000,
+      "updatedAt": 1700000004000
+    },
+    "gp-01": {
+      "id": "gp-01",
+      "label": "AI Regulatory Frameworks",
+      "description": "GP-01 \u2014 Compare AI regulatory frameworks across jurisdictions (EU AI Act, US, UK, China, Global South).",
+      "type": "outcome",
+      "parentId": "cluster-gp",
+      "childIds": [],
+      "createdAt": 1700000400000,
+      "updatedAt": 1700000400000
+    },
+    "gp-02": {
+      "id": "gp-02",
+      "label": "Governance Institutional Design",
+      "description": "GP-02 \u2014 Apply institutional design and political economy analysis to AI governance challenges.",
+      "type": "outcome",
+      "parentId": "cluster-gp",
+      "childIds": [],
+      "createdAt": 1700000401000,
+      "updatedAt": 1700000401000
+    },
+    "gp-03": {
+      "id": "gp-03",
+      "label": "Historical Policy Analogies",
+      "description": "GP-03 \u2014 Draw on historical analogies (nuclear, pharma, aviation, finance) to analyze AI governance options and their limitations.",
+      "type": "outcome",
+      "parentId": "cluster-gp",
+      "childIds": [],
+      "createdAt": 1700000402000,
+      "updatedAt": 1700000402000
+    },
+    "gp-04": {
+      "id": "gp-04",
+      "label": "AI in the Public Sector",
+      "description": "GP-04 \u2014 Evaluate AI in public sector, national security, and government contexts, including autonomous systems and intelligence analysis.",
+      "type": "outcome",
+      "parentId": "cluster-gp",
+      "childIds": [],
+      "createdAt": 1700000403000,
+      "updatedAt": 1700000403000
+    },
+    "gp-05": {
+      "id": "gp-05",
+      "label": "Technical AI Safety Policy",
+      "description": "GP-05 \u2014 Assess technical AI safety proposals (RLHF, red-teaming, evals, constitutional AI) from a policy and governance standpoint.",
+      "type": "outcome",
+      "parentId": "cluster-gp",
+      "childIds": [],
+      "createdAt": 1700000404000,
+      "updatedAt": 1700000404000
+    },
+    "gp-06": {
+      "id": "gp-06",
+      "label": "International AI Dynamics",
+      "description": "GP-06 \u2014 Analyze international AI competition and cooperation, including US-China dynamics and global governance institutions.",
+      "type": "outcome",
+      "parentId": "cluster-gp",
+      "childIds": [],
+      "createdAt": 1700000405000,
+      "updatedAt": 1700000405000
+    },
+    "cluster-rm": {
+      "id": "cluster-rm",
+      "label": "Research & Analytical Methods",
+      "description": "Cluster RM \u2014 Designing and evaluating qualitative, quantitative, and AI-assisted research on AI-related phenomena.",
+      "type": "strand",
+      "parentId": "aihumma-root",
+      "childIds": [
+        "rm-01",
+        "rm-02",
+        "rm-03",
+        "rm-04",
+        "rm-05"
+      ],
+      "createdAt": 1700000005000,
+      "updatedAt": 1700000005000
+    },
+    "rm-01": {
+      "id": "rm-01",
+      "label": "Qualitative Research Design",
+      "description": "RM-01 \u2014 Design and conduct qualitative research (ethnographic fieldwork, elite interviewing, document analysis, discourse analysis).",
+      "type": "outcome",
+      "parentId": "cluster-rm",
+      "childIds": [],
+      "createdAt": 1700000500000,
+      "updatedAt": 1700000500000
+    },
+    "rm-02": {
+      "id": "rm-02",
+      "label": "Computational Research Design",
+      "description": "RM-02 \u2014 Design and conduct computational or quantitative research on AI-related phenomena.",
+      "type": "outcome",
+      "parentId": "cluster-rm",
+      "childIds": [],
+      "createdAt": 1700000501000,
+      "updatedAt": 1700000501000
+    },
+    "rm-03": {
+      "id": "rm-03",
+      "label": "Evidence Evaluation",
+      "description": "RM-03 \u2014 Critically evaluate academic and policy research, distinguishing strong evidence from weak claims.",
+      "type": "outcome",
+      "parentId": "cluster-rm",
+      "childIds": [],
+      "createdAt": 1700000502000,
+      "updatedAt": 1700000502000
+    },
+    "rm-04": {
+      "id": "rm-04",
+      "label": "Evidence Synthesis",
+      "description": "RM-04 \u2014 Synthesize evidence across multiple sources to construct well-supported analytical arguments.",
+      "type": "outcome",
+      "parentId": "cluster-rm",
+      "childIds": [],
+      "createdAt": 1700000503000,
+      "updatedAt": 1700000503000
+    },
+    "rm-05": {
+      "id": "rm-05",
+      "label": "AI as Research Instrument",
+      "description": "RM-05 \u2014 Use AI tools as research instruments (for literature synthesis, data analysis, drafting, and ideation) with critical awareness.",
+      "type": "outcome",
+      "parentId": "cluster-rm",
+      "childIds": [],
+      "createdAt": 1700000504000,
+      "updatedAt": 1700000504000
+    },
+    "cluster-cw": {
+      "id": "cluster-cw",
+      "label": "Communication & Writing",
+      "description": "Cluster CW \u2014 Producing policy, journalistic, and AI-assisted written communication for specialist and general audiences.",
+      "type": "strand",
+      "parentId": "aihumma-root",
+      "childIds": [
+        "cw-01",
+        "cw-02",
+        "cw-03",
+        "cw-04",
+        "cw-05",
+        "cw-06"
+      ],
+      "createdAt": 1700000006000,
+      "updatedAt": 1700000006000
+    },
+    "cw-01": {
+      "id": "cw-01",
+      "label": "Policy Genre Writing",
+      "description": "CW-01 \u2014 Produce policy genre writing (memos, briefs, white papers, testimony) calibrated to non-specialist decision-makers.",
+      "type": "outcome",
+      "parentId": "cluster-cw",
+      "childIds": [],
+      "createdAt": 1700000600000,
+      "updatedAt": 1700000600000
+    },
+    "cw-02": {
+      "id": "cw-02",
+      "label": "Data-Driven Public Narratives",
+      "description": "CW-02 \u2014 Write data-driven narratives for general audiences (journalism, public essays, science writing).",
+      "type": "outcome",
+      "parentId": "cluster-cw",
+      "childIds": [],
+      "createdAt": 1700000601000,
+      "updatedAt": 1700000601000
+    },
+    "cw-03": {
+      "id": "cw-03",
+      "label": "Technical Concept Translation",
+      "description": "CW-03 \u2014 Translate technical AI concepts clearly for lay or policy audiences in written and oral form.",
+      "type": "outcome",
+      "parentId": "cluster-cw",
+      "childIds": [],
+      "createdAt": 1700000602000,
+      "updatedAt": 1700000602000
+    },
+    "cw-04": {
+      "id": "cw-04",
+      "label": "Persuasive Genre Writing",
+      "description": "CW-04 \u2014 Produce persuasive arguments in multiple genres calibrated to specific audiences and institutional contexts.",
+      "type": "outcome",
+      "parentId": "cluster-cw",
+      "childIds": [],
+      "createdAt": 1700000603000,
+      "updatedAt": 1700000603000
+    },
+    "cw-05": {
+      "id": "cw-05",
+      "label": "AI Writing Tool Use",
+      "description": "CW-05 \u2014 Use generative AI tools to enhance and accelerate writing, summarization, and communication workflows.",
+      "type": "outcome",
+      "parentId": "cluster-cw",
+      "childIds": [],
+      "createdAt": 1700000604000,
+      "updatedAt": 1700000604000
+    },
+    "cw-06": {
+      "id": "cw-06",
+      "label": "AI Writing Quality Direction",
+      "description": "CW-06 \u2014 Direct and evaluate AI-assisted writing for policy quality \u2014 applying expert judgment to AI-assisted workflows, evaluating output against professional standards, recognizing plausible-but-wrong analysis, and maintaining author accountability.",
+      "type": "outcome",
+      "parentId": "cluster-cw",
+      "childIds": [],
+      "createdAt": 1700000605000,
+      "updatedAt": 1700000605000
+    },
+    "cluster-hi": {
+      "id": "cluster-hi",
+      "label": "Human-AI Interaction & Design",
+      "description": "Cluster HI \u2014 Designing and evaluating AI systems with attention to human oversight, trust, augmentation, and emerging interaction modalities.",
+      "type": "strand",
+      "parentId": "aihumma-root",
+      "childIds": [
+        "hi-01",
+        "hi-02",
+        "hi-03",
+        "hi-04",
+        "hi-05"
+      ],
+      "createdAt": 1700000007000,
+      "updatedAt": 1700000007000
+    },
+    "hi-01": {
+      "id": "hi-01",
+      "label": "Human-Centered AI Design",
+      "description": "HI-01 \u2014 Apply human-centered design principles to evaluate or build AI-enabled systems and interfaces.",
+      "type": "outcome",
+      "parentId": "cluster-hi",
+      "childIds": [],
+      "createdAt": 1700000700000,
+      "updatedAt": 1700000700000
+    },
+    "hi-02": {
+      "id": "hi-02",
+      "label": "AI Explainability & Trust",
+      "description": "HI-02 \u2014 Design for AI explainability, user trust, and appropriate human oversight in AI deployments.",
+      "type": "outcome",
+      "parentId": "cluster-hi",
+      "childIds": [],
+      "createdAt": 1700000701000,
+      "updatedAt": 1700000701000
+    },
+    "hi-03": {
+      "id": "hi-03",
+      "label": "Augmentation vs Replacement",
+      "description": "HI-03 \u2014 Analyze augmentation vs. replacement dynamics in human-AI collaborative systems.",
+      "type": "outcome",
+      "parentId": "cluster-hi",
+      "childIds": [],
+      "createdAt": 1700000702000,
+      "updatedAt": 1700000702000
+    },
+    "hi-04": {
+      "id": "hi-04",
+      "label": "Human-AI Teaming",
+      "description": "HI-04 \u2014 Evaluate human-AI teaming structures, their effects on agency, accountability, and decision quality.",
+      "type": "outcome",
+      "parentId": "cluster-hi",
+      "childIds": [],
+      "createdAt": 1700000703000,
+      "updatedAt": 1700000703000
+    },
+    "hi-05": {
+      "id": "hi-05",
+      "label": "Emerging AI Modalities",
+      "description": "HI-05 \u2014 Assess emerging human-AI modalities (brain-computer interfaces, wearable biometrics, agentic AI) and their social implications.",
+      "type": "outcome",
+      "parentId": "cluster-hi",
+      "childIds": [],
+      "createdAt": 1700000704000,
+      "updatedAt": 1700000704000
+    },
+    "cluster-sd": {
+      "id": "cluster-sd",
+      "label": "Societal & Domain Applications",
+      "description": "Cluster SD \u2014 Evaluating AI's role and impact across healthcare, security, labor, democracy, creative practice, education, and business.",
+      "type": "strand",
+      "parentId": "aihumma-root",
+      "childIds": [
+        "sd-01",
+        "sd-02",
+        "sd-03",
+        "sd-04",
+        "sd-05",
+        "sd-06",
+        "sd-07"
+      ],
+      "createdAt": 1700000008000,
+      "updatedAt": 1700000008000
+    },
+    "sd-01": {
+      "id": "sd-01",
+      "label": "Healthcare AI",
+      "description": "SD-01 \u2014 Evaluate AI applications in healthcare (diagnostics, clinical decision support, equity in access, regulatory approval).",
+      "type": "outcome",
+      "parentId": "cluster-sd",
+      "childIds": [],
+      "createdAt": 1700000800000,
+      "updatedAt": 1700000800000
+    },
+    "sd-02": {
+      "id": "sd-02",
+      "label": "National Security AI",
+      "description": "SD-02 \u2014 Analyze AI in national security contexts (autonomous weapons, intelligence analysis, cyber operations, disinformation).",
+      "type": "outcome",
+      "parentId": "cluster-sd",
+      "childIds": [],
+      "createdAt": 1700000801000,
+      "updatedAt": 1700000801000
+    },
+    "sd-03": {
+      "id": "sd-03",
+      "label": "Labor & Economic Impact",
+      "description": "SD-03 \u2014 Assess AI's impact on labor markets, employment structures, migration, and economic inequality.",
+      "type": "outcome",
+      "parentId": "cluster-sd",
+      "childIds": [],
+      "createdAt": 1700000802000,
+      "updatedAt": 1700000802000
+    },
+    "sd-04": {
+      "id": "sd-04",
+      "label": "AI & Democracy",
+      "description": "SD-04 \u2014 Examine AI's role in democracy, political discourse, media ecosystems, and institutional stability.",
+      "type": "outcome",
+      "parentId": "cluster-sd",
+      "childIds": [],
+      "createdAt": 1700000803000,
+      "updatedAt": 1700000803000
+    },
+    "sd-05": {
+      "id": "sd-05",
+      "label": "Creative AI Applications",
+      "description": "SD-05 \u2014 Apply AI methods and tools in creative domains (music, film, performance, interactive media).",
+      "type": "outcome",
+      "parentId": "cluster-sd",
+      "childIds": [],
+      "createdAt": 1700000804000,
+      "updatedAt": 1700000804000
+    },
+    "sd-06": {
+      "id": "sd-06",
+      "label": "Educational AI",
+      "description": "SD-06 \u2014 Evaluate AI in educational settings (pedagogy design, learning analytics, curriculum development, academic integrity).",
+      "type": "outcome",
+      "parentId": "cluster-sd",
+      "childIds": [],
+      "createdAt": 1700000805000,
+      "updatedAt": 1700000805000
+    },
+    "sd-07": {
+      "id": "sd-07",
+      "label": "Business AI Applications",
+      "description": "SD-07 \u2014 Analyze AI applications in business and marketing contexts (strategy, customer analytics, operations).",
+      "type": "outcome",
+      "parentId": "cluster-sd",
+      "childIds": [],
+      "createdAt": 1700000806000,
+      "updatedAt": 1700000806000
+    }
+  },
+  "rootIds": [
+    "aihumma-root"
+  ],
+  "typeVocabulary": [
+    {
+      "id": "program",
+      "label": "Program",
+      "color": "purple",
+      "isDefault": true
+    },
+    {
+      "id": "strand",
+      "label": "Strand",
+      "color": "teal",
+      "isDefault": true
+    },
+    {
+      "id": "skillset",
+      "label": "Skillset",
+      "color": "blue",
+      "isDefault": true
+    },
+    {
+      "id": "outcome",
+      "label": "Outcome",
+      "color": "amber",
+      "isDefault": true
+    },
+    {
+      "id": "concept",
+      "label": "Concept",
+      "color": "coral",
+      "isDefault": true
+    },
+    {
+      "id": "skill",
+      "label": "Skill",
+      "color": "green",
+      "isDefault": true
+    },
+    {
+      "id": "grain",
+      "label": "Grain",
+      "color": "slate",
+      "isDefault": true
+    }
+  ]
+}
