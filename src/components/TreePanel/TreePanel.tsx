@@ -37,6 +37,7 @@ export function TreePanel() {
   const reparentNode = useTaxonomyStore(s => s.reparentNode);
   const getDescendantIds = useTaxonomyStore(s => s.getDescendantIds);
   const clearSelection = useTaxonomyStore(s => s.clearSelection);
+  const setFocus = useTaxonomyStore(s => s.setFocus);
 
   const [activeId, setActiveId] = useState<string | null>(null);
   const [dropOverId, setDropOverId] = useState<string | null>(null);
