@@ -28,8 +28,9 @@ export interface TaxonomyStore {
   focusedNodeId: string | null;
   expandedIds: Set<string>;
   selectedIds: Set<string>;
-  editingNodeId: string | null;        // which node has the detail panel open
-  inlineEditingNodeId: string | null;  // which node has the inline label editor active
+  editingNodeId: string | null;           // which node has the detail panel open
+  inlineEditingNodeId: string | null;     // which node has the inline label editor active
+  inlineExpandedIds: Set<string>;         // which nodes have their description shown inline
   activeDetailTab: 'content' | 'ai';
 
   // OPERATIONS
@@ -53,6 +54,7 @@ export interface TaxonomyStore {
   clearSelection: () => void;
   setEditingNode: (nodeId: string | null) => void;
   setInlineEditingNode: (nodeId: string | null) => void;
+  toggleInlineExpanded: (nodeId: string) => void;
   setActiveDetailTab: (tab: 'content' | 'ai') => void;
 
   // VOCABULARY
